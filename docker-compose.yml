@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:14.17.0
+    working_dir: /app
+    env_file: ./.env
+    volumes:
+      - ./app:/app
+    # command: bash -c "npm i -D @types/node"
+    command: bash -c "npm run start"
